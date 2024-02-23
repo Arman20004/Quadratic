@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quadratic", "Quadratic\Quadratic.csproj", "{A928DA7D-0283-4500-83D3-E206B11CB211}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A928DA7D-0283-4500-83D3-E206B11CB211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A928DA7D-0283-4500-83D3-E206B11CB211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A928DA7D-0283-4500-83D3-E206B11CB211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A928DA7D-0283-4500-83D3-E206B11CB211}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6676F86F-5D63-490A-B4C0-AEFD96F2E87A}
+	EndGlobalSection
+EndGlobal
