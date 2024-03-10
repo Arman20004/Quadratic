@@ -3,12 +3,10 @@ using System.Numerics;
 
 ///////////////////////////////////////////////////
 /// Deconstructing in class
-int? a = null, b = null, c = null;
+int a = int.MinValue, b = int.MinValue, c = int.MinValue;
 Solutions.Input(ref a, ref b, ref c);
-
-
 var rootsClass = new Solution();
-(double x1, double x2) = rootsClass.RootCalc((int) a,(int) b,(int) c);
+(double x1, double x2) = rootsClass.Deconsrtuct(a, b, c);
 
 Console.WriteLine("Class\n");
 
@@ -21,42 +19,37 @@ else
 
 Solutions.Run();
 
-public class Solution 
+public class Solution
 {
-    
-    int a { get; set; }
-    int b { get; set; }
-    int c { get; set; }
+    double x1 =-1 , x2 =-1, discriminant;
 
-    public (double val1,double val2) RootCalc(int a, int b ,int c, double x1 = -1, double x2 =-1)
+    private void RootCalc(int a, int b ,int c)
     {
-        double discriminant;
-
+        
         discriminant = b * b - 4 * a * c;
 
         if (discriminant == 0)
         {
             x1 = -b / (2.0 * a);
             x2 = x1;
-            return(x1,x2);
-
         }
         else if (discriminant > 0)
         {
             x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
             x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-            return(x1,x2);
         }
-
-        x1 = x2 = -1;
-        return  (x1,x2);
 
     }
 
+    public (double x1, double x2)  Deconsrtuct(int a, int b, int c) 
+    {
+        RootCalc(a, b, c);
+        return (x1, x2);
+    }
 }
 public class Solutions 
 {
-    public static void Input(ref int? a,ref int? b,ref int? c)
+    public static void Input(ref int a, ref int b, ref int c)
     {
         do
         {
@@ -183,8 +176,8 @@ public class Solutions
 
     public static void Run()
     {
-        int? a = null, b = null, c = null;
-        Input(ref a, ref b, ref c);
+        //int a = int.MinValue, b = int.MinValue, c = int.MinValue;
+        //Input(ref a, ref b, ref c);
         ///////////////////////////////////////////////////
         /// ref
         double x1 = -1, x2 = -1;
